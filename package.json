@@ -7,14 +7,17 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "tsc && node dist/index.js"
+    "start": "yarn run compile && node dist/index.js",
+    "compile": "swc --config-file .swcrc ./src -d dist"
   },
   "dependencies": {
+    "@swc/cli": "^0.1.52",
+    "@swc/core": "^1.2.113",
     "lodash": "^4.17.21",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.2"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.176",
-    "@types/node": "^16.11.6"
+    "@types/lodash": "^4.14.177",
+    "@types/node": "^16.11.10"
   }
 }
